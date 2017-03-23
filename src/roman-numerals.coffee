@@ -10,6 +10,14 @@ module.exports = (robot) ->
 
     decimal = res.match[1]
 
+    if isNaN(decimal)
+      res.reply decimal.toString() + " is not a decimal number. Please enter a decimal number."
+      return
+
+    if decimal >= 10000
+      res.reply decimal.toString() + " is too large. Please enter a number less than 10000."
+      return
+
     digit = decimal % 10
     roman_numerals = get_digit_numerals(digit, ["I", "V", "X"])
 

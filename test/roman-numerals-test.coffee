@@ -13,6 +13,20 @@ describe 'roman-numerals', ->
   afterEach ->
     @room.destroy()
 
+  it 'askes for a decimal number', ->
+    @room.user.say('user', '@hubot translate string').then =>
+      expect(@room.messages).to.eql [
+        ['user', '@hubot translate string']
+        ['hubot', '@user string is not a decimal number. Please enter a decimal number.']
+      ]
+
+  it 'askes for a number less than 10,000', ->
+    @room.user.say('user', '@hubot translate 10000').then =>
+      expect(@room.messages).to.eql [
+        ['user', '@hubot translate 10000']
+        ['hubot', '@user 10000 is too large. Please enter a number less than 10000.']
+      ]
+
   it 'translates 1 to I', ->
     @room.user.say('user', '@hubot translate 1').then =>
       expect(@room.messages).to.eql [
