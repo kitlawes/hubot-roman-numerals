@@ -1,7 +1,7 @@
 {
   "name": "hubot-roman-numerals",
   "description": "A hubot script for translating decimal numbers into roman numerals",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "kitlawes",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
