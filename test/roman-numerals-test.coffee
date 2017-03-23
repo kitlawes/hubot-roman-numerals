@@ -27,6 +27,13 @@ describe 'roman-numerals', ->
         ['hubot', '@user 10000 is too large. Please enter a number less than 10000.']
       ]
 
+  it 'askes for a positive number', ->
+    @room.user.say('user', '@hubot translate 0').then =>
+      expect(@room.messages).to.eql [
+        ['user', '@hubot translate 0']
+        ['hubot', '@user 0 is not positive. Please enter a positive number.']
+      ]
+
   it 'translates 1 to I', ->
     @room.user.say('user', '@hubot translate 1').then =>
       expect(@room.messages).to.eql [

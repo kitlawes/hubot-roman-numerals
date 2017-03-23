@@ -18,6 +18,10 @@ module.exports = (robot) ->
       res.reply decimal.toString() + " is too large. Please enter a number less than 10000."
       return
 
+    if decimal <= 0
+      res.reply decimal.toString() + " is not positive. Please enter a positive number."
+      return
+
     digit = decimal % 10
     roman_numerals = get_digit_numerals(digit, ["I", "V", "X"])
 
