@@ -1,6 +1,6 @@
 {
   "name": "hubot-roman-numerals",
-  "description": "A hubot script for translating decimal numbers into remoan numerals",
+  "description": "A hubot script for translating decimal numbers into roman numerals",
   "version": "0.0.0",
   "author": "kitlawes",
   "license": "MIT",
@@ -12,7 +12,9 @@
   "bugs": {
     "url": "https://github.com/kitlawes/hubot-roman-numerals/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "coffee-script": "^1.6.3"
+  },
   "peerDependencies": {
     "hubot": "2.x"
   },
@@ -27,7 +29,7 @@
     "hubot": "2.x",
     "hubot-test-helper": "^1.5.1",
     "matchdep": "~0.3.0",
-    "mocha": "^2.1.0",
+    "mocha": "^2.5.3",
     "sinon": "^1.13.0",
     "sinon-chai": "^2.7.0"
   },
