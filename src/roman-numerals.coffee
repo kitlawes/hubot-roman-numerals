@@ -1,14 +1,11 @@
 # Description
-#   A hubot script for translating decimal numbers into remoan numerals
+#   A hubot script for translating decimal numbers into roman numerals
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
+#   translate <decimal> - translates the decimal number into roman numerals
 
 module.exports = (robot) ->
 
-  robot.respond /hello/, (res) ->
-    res.reply "hello!"
-
-  robot.hear /orly/, (res) ->
-    res.send "yarly"
+  robot.respond /translate (.*)/, (res) ->
+    decimal = res.match[1]
+    res.reply "I"
